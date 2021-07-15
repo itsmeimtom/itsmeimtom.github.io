@@ -17,8 +17,16 @@ May be out of date due to Cloudflare caching.
 - **{{ site.documents.size }}** Pages in Collections
 - **{{ site.static_files.size }}** Static Files
 
+---
+
+## Jekyll Variable
+<pre style="max-height: 95vh; overflow: scroll; background-color: #000; color: #fff;">
+{{ jekyll | jsonify | escape }}
+</pre>
+
+---
 
 ## Site Variable
 <pre style="max-height: 95vh; overflow: scroll; background-color: #000; color: #fff;">
-{{ site | inspect }}
+{{ site | jsonify | escape }}
 </pre>
