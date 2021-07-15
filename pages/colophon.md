@@ -7,6 +7,7 @@ hidden: true
 wide: true
 ---
 
+
 May be out of date due to Cloudflare caching.
 
 - Jekyll Version **{{ jekyll.version }}**
@@ -28,5 +29,10 @@ May be out of date due to Cloudflare caching.
 
 ## Site Variable
 <pre style="max-height: 95vh; overflow: scroll; background-color: #000; color: #fff;">
-{{ site | jsonify | escape }}
+{% if jekyll.environment != "production" %}
+{{ site | inspect }}
+{% else %}
+~ Hidden on production site ~
+{% endif %}
 </pre>
+
